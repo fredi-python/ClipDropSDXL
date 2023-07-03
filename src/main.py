@@ -61,7 +61,7 @@ WebDriverWait(driver, 2).until(
 # WebDriverWait(driver, ).until(EC.presence_of_element_located((By.CSS_SELECTOR, "button.bg-primary-200:nth-child(2)"))).click()
 # image_element1 = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "button.absolute:nth-child(1) > img:nth-child(1)")))
 
-# image_url = image_element1.get_attribute('ClipDropSDXL')
+# image_url = image_element1.get_attribute('src')
 
 
 def get_file_content_chrome(driver, uri):
@@ -94,7 +94,7 @@ image_elements = [WebDriverWait(driver, 20).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "button.absolute:nth-child(4) > img:nth-child(1)")))]
 
 for i, image_element in enumerate(image_elements):
-    image_url = image_element.get_attribute('ClipDropSDXL')
+    image_url = image_element.get_attribute('src')
     bytes = get_file_content_chrome(driver, image_url)
     file_name = f"{i}.jpg"
     file_path = os.path.join(output_dir, file_name)
