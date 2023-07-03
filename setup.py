@@ -12,7 +12,7 @@ setup(
         ]
     },
     install_requires=[
-        "selenium"
+        "selenium",
         "argparse"
     ],
     author='Your Name',
