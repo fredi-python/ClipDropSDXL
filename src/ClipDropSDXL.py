@@ -10,13 +10,12 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 def main():
-
     parser = argparse.ArgumentParser()
     parser.add_argument('--headless', action='store_true', help='Run Browser in headless mode')
-    parser.add_argument('--style', default='shrink-0', help='Style option (default: shrink-0)')
+    parser.add_argument('--style', default='shrink-0', help='Style option')
     parser.add_argument('--prompt', help='Prompt to send to Clipdrop', required=True, type=str)
     parser.add_argument('--output-dir', help='Output Directory', type=str, default=os.getcwd()+"/outputs")
-    parser.add_argument('--browser', default='chrome', help='Browser option (default: chrome)')
+    parser.add_argument('--browser', default='chrome', help='Browser to use (default: chrome)')
     args = parser.parse_args()
 
 
@@ -58,13 +57,6 @@ def main():
 
     WebDriverWait(driver, 2).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, ".hover\\3A bg-primary-400:nth-child(2)"))).click()
-
-
-    # WebDriverWait(driver, ).until(EC.presence_of_element_located((By.CSS_SELECTOR, "button.bg-primary-200:nth-child(2)"))).click()
-    # image_element1 = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "button.absolute:nth-child(1) > img:nth-child(1)")))
-
-    # image_url = image_element1.get_attribute('src')
-
 
     def get_file_content_chrome(driver, uri):
         result = driver.execute_async_script("""
