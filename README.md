@@ -1,4 +1,6 @@
-# ClipDropSDXL
+
+# ClipDropSDXL <img src="https://github.com/fredi-python/ClipDropSDXL/assets/83492589/b3d508ee-d810-4b8b-9d1b-87a4b84967a2" width="2.5%"></img>
+
 Selenium Wrapper for ClipDrop: Unlocking High-Resolution Text-to-Image Creation with StableDiffusionXL (SDXL)
 ## Installation
 ```
