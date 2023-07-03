@@ -4,8 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name='ClipDropSDXL',
     version='0.0.1',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
+    packages=['ClipDropSDXL'],
     entry_points={
         'console_scripts': [
             'ClipDropSDXL = ClipDropSDXL.main:main'
