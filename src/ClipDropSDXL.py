@@ -15,7 +15,7 @@ def main():
     parser.add_argument('--style', default='shrink-0', help='Style option')
     parser.add_argument('--prompt', help='Prompt to send to Clipdrop', required=True, type=str)
     parser.add_argument('--output-dir', help='Output Directory', type=str, default=os.getcwd()+"/outputs")
-    parser.add_argument('--browser', default='chrome', help='Browser to use (default: chrome)')
+    parser.add_argument('--browser', default='firefox', help='Browser to use (default: firefox)')
     args = parser.parse_args()
 
 
