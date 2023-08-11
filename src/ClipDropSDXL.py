@@ -44,7 +44,7 @@ def main():
     WebDriverWait(driver, 20).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "button.termly-styles-module-root-f61419:nth-child(3)"))).click()
 
-    input_prompt = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "input-prompt")))
+    input_prompt = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "prompt")))
     input_prompt.click()
 
     input_prompt.send_keys(args.prompt)
