@@ -49,7 +49,7 @@ def main():
 
     input_prompt.send_keys(args.prompt)
 
-    WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.w-full:nth-child(1)"))).click()
+    WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bg-primary-500:nth-child(2)"))).click()
 
     style = args.style
 
