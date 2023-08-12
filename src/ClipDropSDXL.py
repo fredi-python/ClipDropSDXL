@@ -27,7 +27,7 @@ def main():
         raise ValueError("Invalid browser option. Supported options are 'chrome' and 'firefox'.")
 
     style = args.style
-    styles = ["no-style", "anime", "photographic", "digital-art", "comic-book", "fantasy-art", "analog-film", "neon-punk", "isometric", "low-poly", "origami", "line-art", "cinematic", "3d-model", "pixel-art"]
+    styles = ["no-style", "anime", "photographic", "digital-art", "comic-book", "fantasy-art", "analog-film", "neonpunk", "isometric", "lowpoly", "origami", "line-art", "cinematic", "3d-model", "pixel-art"]
     if style not in styles:
         raise ValueError(f"Invalid Style option, follow list:\n{styles}")
 
