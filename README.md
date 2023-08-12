@@ -1,4 +1,3 @@
-
 # ClipDropSDXL <img src="https://github.com/fredi-python/ClipDropSDXL/assets/83492589/b3d508ee-d810-4b8b-9d1b-87a4b84967a2" width="2.5%"></img>
 
 Selenium Wrapper for ClipDrop: Unlocking High-Resolution Text-to-Image Creation with StableDiffusionXL (SDXL)
@@ -27,49 +26,33 @@ options:
 
 
 **NEONPUNK**
+
 ```
-python3 -m ClipDropSDXL --headless --prompt "golden retriever" --style neonpunk
+python3 -m ClipDropSDXL --prompt 'Man in hoodie walking away from camera' --style neonpunk
 ```
-![10](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/84e5c0d7-2d73-447d-9b89-809b94c66376)
+
+![140](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/a21abb9f-101b-4151-b35a-47fcbb40afb7)
+
+```
+python3 -m ClipDropSDXL --prompt 'stunning sunset over a calm beach with palm trees.' --style neonpunk
+```
+![118](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/caa69965-ac40-4813-bbe2-abeb7b12dfb5)
 
 
 
 
-**ANIME**
-```
-python3 -m ClipDropSDXL --headless --prompt "golden retriever" --style anime
-```
-![4](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/f668675d-6d61-4a34-91f6-88ae618761da)
+
 
 **PHOTOGRAPHIC**
-```
-python3 -m ClipDropSDXL --headless --prompt "golden retriever" --style photographic
-```
-![18](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/62464108-a99d-4e77-8dce-c31d1f026948)
 
-
-**LOWPOLY**
 ```
-python3 -m ClipDropSDXL --headless --prompt "golden retriever" --style lowpoly
-```
-![13](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/d5951054-14c1-48e5-84be-973e64cf889f)
-
-**ORIGAMI**
-```
-python3 -m ClipDropSDXL --headless --prompt "golden retriever" --style origami
-```
-![20](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/bf3eb88a-a3c2-4393-8d3c-caed595874ef)
-
-**COMICBOOK**
-```
-python3 -m ClipDropSDXL --headless --prompt "golden retriever" --style comicbook
-```
-![30](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/14eb55a2-86f2-43df-b10b-5f9c35479cbc)
-
-**LINEART**
-```
-python3 -m ClipDropSDXL --headless --prompt "golden retriever" --style lineart
+python3 -m ClipDropSDXL --prompt 'Car' --style photographic
 ```
 
-![35](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/bdf2af18-d378-4b6b-87db-223da7a337e9)
+![170](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/be95eb54-6608-42cd-82fb-1e12f57bbceb)
+
+```
+python3 -m ClipDropSDXL --prompt 'landscape of a Japanese garden in autumn' --style photographic
+```
+![183](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/3c833388-5b23-4194-9f0c-d3d46b53bf2f)
 
