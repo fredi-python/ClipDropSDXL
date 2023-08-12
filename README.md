@@ -21,7 +21,7 @@ options:
   --browser BROWSER     Browser to use (default: chrome)
 ```
 ### Working with styles
-**Available styles:** <br>`anime`, `photographic`, `digitalart`, `comicbook`, `fantasyart`, `analogfilm`, `neonpunk`, `isometric`, `lowpoly`, `origami`, `lineart`, `cinematic`, `(3)dmodel`, `pixelart`
+**Available styles:** <br>`anime`, `photographic`, `digital-art`, `comic-book`, `fantasy-art`, `analog-film`, `neonpunk`, `isometric`, `lowpoly`, `origami`, `line-art`, `cinematic`, `3d-model`, `pixel-art`
 
 ## Usage Examples
 
