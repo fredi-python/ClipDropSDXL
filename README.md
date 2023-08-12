@@ -24,6 +24,20 @@ options:
 
 ## Usage Examples
 
+**PHOTOGRAPHIC**
+
+```
+python3 -m ClipDropSDXL --prompt 'Car' --style photographic
+```
+
+![170](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/be95eb54-6608-42cd-82fb-1e12f57bbceb)
+
+```
+python3 -m ClipDropSDXL --prompt 'landscape of a Japanese garden in autumn' --style photographic
+```
+![183](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/3c833388-5b23-4194-9f0c-d3d46b53bf2f)
+
+
 
 **NEONPUNK**
 
@@ -37,22 +51,4 @@ python3 -m ClipDropSDXL --prompt 'Man in hoodie walking away from camera' --styl
 python3 -m ClipDropSDXL --prompt 'stunning sunset over a calm beach with palm trees.' --style neonpunk
 ```
 ![118](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/caa69965-ac40-4813-bbe2-abeb7b12dfb5)
-
-
-
-
-
-
-**PHOTOGRAPHIC**
-
-```
-python3 -m ClipDropSDXL --prompt 'Car' --style photographic
-```
-
-![170](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/be95eb54-6608-42cd-82fb-1e12f57bbceb)
-
-```
-python3 -m ClipDropSDXL --prompt 'landscape of a Japanese garden in autumn' --style photographic
-```
-![183](https://github.com/fredi-python/ClipDropSDXL/assets/83492589/3c833388-5b23-4194-9f0c-d3d46b53bf2f)
 
