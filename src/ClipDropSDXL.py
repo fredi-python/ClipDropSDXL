@@ -26,10 +26,10 @@ def main():
     else:
         raise ValueError("Invalid browser option. Supported options are 'chrome' and 'firefox'.")
 
-    argstyle = args.style.replace("3dmodel", "dmodel")
-    styles = ["shrink-0", "anime", "photographic", "digitalart", "comicbook", "fantasyart", "analogfilm", "neonpunk", "isometric", "lowpoly", "origami", "lineart", "cinematic", "dmodel", "pixelart"]
-    if argstyle not in styles:
-        raise ValueError("Invalid Style option, valid styles are:\nanime\nphotographic\ndigitalart\ncomicbook\nfantasyart\nanalogfilm\nneonpunk\nisometric\nlowpoly\norigami\nlineart\ncinematic\n(3)dmodel\npixelart")
+    style = args.style
+    styles = ["no-style", "anime", "photographic", "digital-art", "comic-book", "fantasy-art", "analog-film", "neon-punk", "isometric", "low-poly", "origami", "line-art", "cinematic", "3d-model", "pixel-art"]
+    if style not in styles:
+        raise ValueError(f"Invalid Style option, follow list:\n{styles}")
 
     options.headless = args.headless
 
@@ -49,14 +49,14 @@ def main():
 
     input_prompt.send_keys(args.prompt)
 
-    WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.bg-primary-500:nth-child(2)"))).click()
+    WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.md\:flex-none:nth-child(1)"))).click()
 
-    style = args.style
 
-    WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CLASS_NAME, style))).click()
+
+    WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.XPATH, f"/html/body/div[1]/div/div[1]/div/main/div/div[2]/section/div/form/div[2]/div/div[2]/div[1]/div/div/div[{styles.index(style)+1}]/label"))).click()
 
     WebDriverWait(driver, 2).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, ".hover\\3A bg-primary-400:nth-child(2)"))).click()
+        EC.presence_of_element_located((By.CSS_SELECTOR, "button.bg-primary-500:nth-child(2)"))).click()
 
     def get_file_content_chrome(driver, uri):
         result = driver.execute_async_script("""
@@ -79,13 +79,13 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
 
     image_elements = [WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, "button.absolute:nth-child(1) > img:nth-child(1)"))),
+        EC.presence_of_element_located((By.CSS_SELECTOR, "div.rounded-md:nth-child(2) > img:nth-child(1)"))),
         WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "button.absolute:nth-child(2) > img:nth-child(1)"))),
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div.rounded-md:nth-child(3) > img:nth-child(1)"))),
         WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "button.absolute:nth-child(3) > img:nth-child(1)"))),
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div.rounded-md:nth-child(4) > img:nth-child(1)"))),
         WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "button.absolute:nth-child(4) > img:nth-child(1)")))]
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div.rounded-md:nth-child(5) > img:nth-child(1)")))]
 
     for i, image_element in enumerate(image_elements):
         image_url = image_element.get_attribute('src')
